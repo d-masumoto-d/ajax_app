@@ -22,7 +22,7 @@ function post (){
     XHR.open("POST", "/posts", true);
     XHR.responseType = "json";
     XHR.send(formData);
-    XHR.Onload = () => {
+    XHR.onload = () => {
       if (XHR.status != 200){
         alert(`Error ${XHR.status}: ${XHR.statusText}`);
         return null;
